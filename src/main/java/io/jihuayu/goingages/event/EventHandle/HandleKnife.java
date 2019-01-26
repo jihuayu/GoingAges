@@ -26,7 +26,7 @@ public class HandleKnife extends GAEventHandle
             e.getDrops().add(new ItemStack(Items.STICK,num));
         }
         else if(block.equals(Blocks.TALLGRASS)||block.equals(Blocks.DOUBLE_PLANT)){
-            e.setDropChance(1.0f);
+            e.setDropChance(0.9f);
             e.getDrops().clear();
             int num = e.getFortuneLevel()+1;
             e.getDrops().add(new ItemStack(ItemsRegister.grass_fiber,num));

@@ -28,8 +28,9 @@ public class GoingAges
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        proxy.preInit(event);
         logger = event.getModLog();
+        proxy.preInit(event);
+
     }
 
     @EventHandler
