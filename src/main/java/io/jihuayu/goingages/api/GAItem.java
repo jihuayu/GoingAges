@@ -9,7 +9,6 @@ public class GAItem extends Item
         this.setName(name);
     }
     public GAItem(){
-
     }
     public Item setName(String name){
         this.setRegistryName(name);

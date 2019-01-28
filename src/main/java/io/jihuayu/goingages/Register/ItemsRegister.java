@@ -29,7 +29,7 @@ public class ItemsRegister extends GAEventHandle {
     @SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event)
     {
-        ((ForgeRegistry<IRecipe>)event.getRegistry()).clear();
+        //((ForgeRegistry<IRecipe>)event.getRegistry()).clear();
 
     }
 }

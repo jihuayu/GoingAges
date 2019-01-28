@@ -6,3 +6,4 @@
 - GrassRope:3个GrassFiber无序合成
 - SharpStick：木棍敲击石头或者木头获得
 - SoulFire:Mob被烧死时获得
+- TorchSimple:可以燃烧10min的火把

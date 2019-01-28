@@ -1,0 +1,19 @@
+{
+  "package": "io.jihuayu.goingages.mixin.item",
+  "required": true,
+  "refmap": "mixins.goingages.refmap.json",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.6",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "NewAxe",
+    "NewHoe",
+    "NewPickaxe",
+    "NewSpade",
+    "NewTorch"
+  ],
+  "client": [],
+  "injectors": {
+    "maxShiftBy": 10
+  }
+}
