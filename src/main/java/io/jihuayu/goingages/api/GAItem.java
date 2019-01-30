@@ -12,7 +12,7 @@ public class GAItem extends Item
     }
     public Item setName(String name){
         this.setRegistryName(name);
-        this.setUnlocalizedName(GoingAges.MODID + ";" + name);
+        this.setUnlocalizedName(GoingAges.MODID + ":" + name);
         return this;
     }
 }

@@ -18,12 +18,13 @@ public class ItemsRegister extends GAEventHandle {
     public static final Item grass_fiber = new GrassFiber();
     public static final Item soul_fire = new SoulFire();
     public static final Item sharp_stick = new SharpStick();
+    public static final Item  incense = new Incense();
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
 //        ((ForgeRegistry<Item>)event.getRegistry()).remove(Items.COAL.getRegistryName());
         event.getRegistry().registerAll(
-                knife_diamond,grass_fiber,soul_fire,sharp_stick
+                knife_diamond,grass_fiber,soul_fire,sharp_stick,incense
         );
     }
     @SubscribeEvent

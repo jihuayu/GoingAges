@@ -24,7 +24,7 @@ public class GATool extends ItemTool
 
    public Item setName(String name){
        this.setRegistryName(name);
-       this.setUnlocalizedName(GoingAges.MODID + ";" + name);
+       this.setUnlocalizedName(GoingAges.MODID + ":" + name);
        return this;
    }
     @Override
