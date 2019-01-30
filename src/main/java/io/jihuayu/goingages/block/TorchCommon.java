@@ -8,7 +8,7 @@ import net.minecraft.block.BlockTorch;
 public class TorchCommon extends BlockTorch implements ITimeUser {
     public TorchCommon(){
         String name = "torch_common";
-        this.setUnlocalizedName(GoingAges.MODID+"."+name);
+        this.setUnlocalizedName(GoingAges.MODID+";"+name);
         this.setRegistryName(name);
         this.setCreativeTab(CreativeTabsRegister.misc);
     }
