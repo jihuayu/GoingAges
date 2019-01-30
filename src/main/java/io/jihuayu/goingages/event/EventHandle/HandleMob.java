@@ -13,6 +13,10 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class HandleMob extends GAEventHandle
 {
+    /**
+     * 怪物被烧死后掉落灵魂火
+     * @param e 生物掉落事件
+     */
     @SubscribeEvent(priority = EventPriority.LOW)
     public void modDie(LivingDropsEvent e){
         if(!(e.getEntityLiving() instanceof EntityMob))return;

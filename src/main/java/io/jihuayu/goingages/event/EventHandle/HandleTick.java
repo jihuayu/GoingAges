@@ -13,11 +13,20 @@ import net.minecraftforge.fml.relauncher.Side;
 import static net.minecraftforge.common.DimensionManager.getWorld;
 
 public class HandleTick extends GAEventHandle {
+    /**
+     * 计时
+     * @param e
+     */
     @SubscribeEvent
     public void onServerTick(TickEvent.ServerTickEvent e){
         if(e.side.equals(Side.SERVER)&&e.phase.equals(TickEvent.ServerTickEvent.Phase.END))
             ManagerDate.onTick();
     }
+
+    /**
+     * 判断有么有火把烧没了，有就移除
+     * @param e
+     */
     @SubscribeEvent
     public void onWorldTick(TickEvent.WorldTickEvent e){
         World world = e.world;

@@ -12,6 +12,10 @@ import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class HandleTimeUser extends GAEventHandle {
+    /**
+     * 放置火把加入移除计时
+     * @param e
+     */
     @SubscribeEvent
     public void set(BlockEvent.PlaceEvent e){
         Block block = e.getPlacedBlock().getBlock();
@@ -20,6 +24,11 @@ public class HandleTimeUser extends GAEventHandle {
         Long time = ManagerDate.date.getTime()+((ITimeUser) block).getUseTime();
         ManagerTimeUser.addObject(new TimeUserObject(block,pos,time));
     }
+
+    /**
+     * 破坏火把移除计时
+     * @param e
+     */
     @SubscribeEvent
     public void take(BlockEvent.BreakEvent e){
         GoingAges.logger.info("111111111111111111");

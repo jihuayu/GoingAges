@@ -15,6 +15,10 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class HandleKnife extends GAEventHandle
 {
+    /**
+     * 小刀砍树叶和草掉落木棍和纤维
+     * @param e 物品掉落事件
+     */
     @SubscribeEvent
     public void KnifeUse(BlockEvent.HarvestDropsEvent e){
         if(e==null||e.getHarvester()==null||!e.getHarvester().getHeldItem(EnumHand.MAIN_HAND).getItem().equals(ItemsRegister.knife_diamond))return;

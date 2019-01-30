@@ -14,6 +14,11 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class HandlePlayer extends GAEventHandle
 {
+
+    /**
+     * 空手破坏树叶草
+     * @param e
+     */
     @SubscribeEvent
     public void breakLeaves(BlockEvent.HarvestDropsEvent e){
         if(e==null||e.getHarvester()==null||!e.getHarvester().getHeldItem(EnumHand.MAIN_HAND).equals(ItemStack.EMPTY))return;
@@ -30,6 +35,10 @@ public class HandlePlayer extends GAEventHandle
         }
     }
 
+    /**
+     * 不能破坏其他方块，除非用对应道具
+     * @param e
+     */
     @SubscribeEvent
     public void breakStop(PlayerEvent.BreakSpeed e){
         Block block = e.getState().getBlock();

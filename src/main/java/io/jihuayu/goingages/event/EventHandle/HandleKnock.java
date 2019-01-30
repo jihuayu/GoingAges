@@ -15,6 +15,10 @@ import net.minecraftforge.fml.relauncher.Side;
 import java.util.Random;
 
 public class HandleKnock extends GAEventHandle {
+    /**
+     * 玩家木棍左击石头或者木头变成尖锐的木棍
+     * @param e 玩家左击事件
+     */
     @SubscribeEvent
     public void KnockStick(PlayerInteractEvent e){
         if(!e.getItemStack().getItem().equals(Items.STICK))return;
