@@ -13,6 +13,6 @@ public class TabTool extends CreativeTabs
 
     @Override
     public ItemStack getTabIconItem() {
-        return new ItemStack(ItemsRegister.knife_diamond);
+        return new ItemStack(ItemsRegister.wood_knife);
     }
 }

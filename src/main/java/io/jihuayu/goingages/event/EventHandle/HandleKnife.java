@@ -21,7 +21,7 @@ public class HandleKnife extends GAEventHandle
      */
     @SubscribeEvent
     public void KnifeUse(BlockEvent.HarvestDropsEvent e){
-        if(e==null||e.getHarvester()==null||!e.getHarvester().getHeldItem(EnumHand.MAIN_HAND).getItem().equals(ItemsRegister.knife_diamond))return;
+        if(e==null||e.getHarvester()==null||!e.getHarvester().getHeldItem(EnumHand.MAIN_HAND).getItem().equals(ItemsRegister.wood_knife))return;
         Block block = e.getState().getBlock();
         if(block.equals(Blocks.LEAVES)||block.equals(Blocks.LEAVES2)){
             e.setDropChance(0.5f);
