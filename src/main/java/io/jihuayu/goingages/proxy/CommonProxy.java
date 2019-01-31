@@ -12,7 +12,7 @@ public class CommonProxy
     {
         new HandlesRegister();
         new CreativeTabsRegister();
-        new TileEntityRegister();
+        new TileEntitysRegister();
     }
 
     public void init(FMLInitializationEvent event)

@@ -1,9 +1,11 @@
 package io.jihuayu.goingages.block;
 
+import io.jihuayu.goingages.GoingAges;
 import io.jihuayu.goingages.Register.ItemsRegister;
-import io.jihuayu.goingages.api.GABlock;
+import io.jihuayu.goingages.api.GABlockContainer;
 import io.jihuayu.goingages.entity.block.TileEntitySieveBase;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -19,16 +21,17 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 
-public class SieveBase extends GABlock implements ITileEntityProvider {
+public class SieveBase extends GABlockContainer {
 
     public SieveBase() {
-        super(Material.WOOD, "sieve_base");
-
+        super(Material.WOOD,"sieve_base");
     }
+
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
         return new TileEntitySieveBase();
     }
+
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
@@ -42,6 +45,7 @@ public class SieveBase extends GABlock implements ITileEntityProvider {
         }
         return false;
     }
+
     @Override
     public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
     {
@@ -59,7 +63,8 @@ public class SieveBase extends GABlock implements ITileEntityProvider {
             }
         }
         if(worldIn.getTileEntity(pos.add(0,1,0)) instanceof TileEntityChest){
-            ((TileEntitySieveBase)(worldIn.getTileEntity(pos))).setCheat((TileEntityChest)worldIn.getTileEntity(pos.add(0,1,0)) );
+            ((TileEntitySieveBase)(worldIn.getTileEntity(pos))).setCheat(pos.add(0,1,0) );
         }
     }
+
 }

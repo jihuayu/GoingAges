@@ -27,7 +27,7 @@ public class ItemsRegister extends GAEventHandle {
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
         registerAll(event,
-                wood_knife,grass_fiber,soul_fire,sharp_stick,incense,grass_rope
+                incense,sharp_stick,grass_rope,soul_fire,grass_fiber,wood_knife
         );
     }
     private static void registerAll(RegistryEvent.Register<Item> event,Item... values){

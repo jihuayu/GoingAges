@@ -22,14 +22,14 @@ public class BlocksRegister extends GAEventHandle {
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
         event.getRegistry().registerAll(
-                worship_table,sieve_base
+                sieve_base,worship_table
         );
     }
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
         registerAll( event,
-                worship_table,sieve_base
+                sieve_base,worship_table
         );
     }
 
