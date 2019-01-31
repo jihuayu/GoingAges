@@ -32,7 +32,7 @@ public class ItemsRegister extends GAEventHandle {
     }
     private static void registerAll(RegistryEvent.Register<Item> event,Item... values){
         for (Item i :values){
-            event.getRegistry().register(i.setRegistryName(i.getRegistryName()));
+            event.getRegistry().register(i);
             registerRender(i);
         }
     }

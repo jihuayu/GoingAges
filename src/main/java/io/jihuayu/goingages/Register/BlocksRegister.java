@@ -1,6 +1,7 @@
 package io.jihuayu.goingages.Register;
 
 import io.jihuayu.goingages.api.GAEventHandle;
+import io.jihuayu.goingages.block.SieveBase;
 import io.jihuayu.goingages.block.WorshipTable;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -16,18 +17,19 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @Mod.EventBusSubscriber
 public class BlocksRegister extends GAEventHandle {
     public static Block worship_table = new WorshipTable();
+    public static Block sieve_base = new SieveBase();
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
         event.getRegistry().registerAll(
-                worship_table
+                worship_table,sieve_base
         );
     }
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
         registerAll( event,
-                worship_table
+                worship_table,sieve_base
         );
     }
 

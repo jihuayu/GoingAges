@@ -33,6 +33,7 @@ public class WorshipTable extends GABlock {
     }
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
+        if (worldIn.isRemote) return true;
         if(playerIn.getHeldItem(hand).getItem().equals(ItemsRegister.incense)){
             this.activated(worldIn,pos,state,playerIn,hand,facing,hitX,hitY,hitZ);
             worldIn.playSound((EntityPlayer)null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_ANVIL_BREAK, SoundCategory.PLAYERS, 0.7F, 1.0f);
@@ -55,6 +56,7 @@ public class WorshipTable extends GABlock {
     }
 
     public void activated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ){
+
         if(worldIn.getBlockState(pos.add(0,0,-1)).getBlock().equals(Blocks.CHEST)){
             TileEntity tileEntity = worldIn.getTileEntity(pos.add(0,0,-1));
             if(tileEntity instanceof TileEntityChest){
