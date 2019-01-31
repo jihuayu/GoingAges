@@ -1,8 +1,6 @@
 package io.jihuayu.goingages.Register;
 
-import io.jihuayu.goingages.GoingAges;
 import io.jihuayu.goingages.api.GAEventHandle;
-import io.jihuayu.goingages.block.TorchSimple;
 import io.jihuayu.goingages.block.WorshipTable;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -17,20 +15,19 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 @Mod.EventBusSubscriber
 public class BlocksRegister extends GAEventHandle {
-    public static Block torch_simple = new TorchSimple();
     public static Block worship_table = new WorshipTable();
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event)
     {
         event.getRegistry().registerAll(
-                torch_simple,worship_table
+                worship_table
         );
     }
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event)
     {
         registerAll( event,
-                torch_simple,worship_table
+                worship_table
         );
     }
 

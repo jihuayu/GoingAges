@@ -12,9 +12,6 @@ public class HandlesRegister {
     public static final GAEventHandle handle_player = new HandlePlayer();
     public static final GAEventHandle handle_mob = new HandleMob();
     public static final GAEventHandle handle_knock = new HandleKnock();
-    public static final GAEventHandle handle_tick = new HandleTick();
-    public static final GAEventHandle handle_time_user = new HandleTimeUser();
-    public static final GAEventHandle handle_server = new HandleServer();
 
 //    public static final GAOreGenHandle handle_ore_gen = new HandleOreGen();
 
