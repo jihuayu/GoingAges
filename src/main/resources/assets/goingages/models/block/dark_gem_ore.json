@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "goingages:blocks/dark_gem_ore"
+    }
+}
