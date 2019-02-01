@@ -10,7 +10,7 @@ import net.minecraft.item.ItemTool;
 
 import java.util.Set;
 
-public class GATool extends ItemTool
+public abstract class GATool extends ItemTool
 {
     protected GATool(ToolMaterial materialIn, Set<Block> effectiveBlocksIn) {
         super(materialIn, effectiveBlocksIn);

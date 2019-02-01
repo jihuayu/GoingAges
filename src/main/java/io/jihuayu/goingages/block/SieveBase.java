@@ -66,5 +66,8 @@ public class SieveBase extends GABlockContainer {
             ((TileEntitySieveBase)(worldIn.getTileEntity(pos))).setCheat(pos.add(0,1,0) );
         }
     }
-
+    public boolean isOpaqueCube(IBlockState state)
+    {
+        return false;
+    }
 }

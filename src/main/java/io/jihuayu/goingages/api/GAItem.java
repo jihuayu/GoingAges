@@ -3,7 +3,7 @@ package io.jihuayu.goingages.api;
 import io.jihuayu.goingages.GoingAges;
 import net.minecraft.item.Item;
 
-public class GAItem extends Item
+public abstract class GAItem extends Item
 {
     public GAItem(String name){
         this.setName(name);

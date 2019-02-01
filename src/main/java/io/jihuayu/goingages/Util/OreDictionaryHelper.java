@@ -1,4 +1,4 @@
-package io.jihuayu.goingages.api;
+package io.jihuayu.goingages.Util;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
