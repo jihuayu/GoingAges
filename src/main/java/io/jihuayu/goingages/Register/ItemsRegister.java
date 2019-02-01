@@ -23,11 +23,17 @@ public class ItemsRegister extends GAEventHandle {
     public static final Item sharp_stick = new SharpStick();
     public static final Item  incense = new Incense();
     public static final Item grass_rope  =new GrassRope();
+    public static final Item life_gem = new Gem().setName("life_gem");
+    public static final Item death_gem = new Gem().setName("death_gem");
+    public static final Item water_gem = new Gem().setName("water_gem");
+    public static final Item fire_gem = new Gem().setName("fire_gem");
+    public static final Item metal_gem = new Gem().setName("metal_gem");
+
     @SubscribeEvent
-    public static void registerItems(RegistryEvent.Register<Item> event)
-    {
+    public static void registerItems(RegistryEvent.Register<Item> event) {
         registerAll(event,
-                incense,sharp_stick,grass_rope,soul_fire,grass_fiber,wood_knife
+                incense,sharp_stick,grass_rope,soul_fire,grass_fiber,wood_knife,
+                life_gem,death_gem,water_gem,fire_gem,metal_gem
         );
     }
     private static void registerAll(RegistryEvent.Register<Item> event,Item... values){
@@ -37,15 +43,13 @@ public class ItemsRegister extends GAEventHandle {
         }
     }
     @SideOnly(Side.CLIENT)
-    private static void registerRender(Item item)
-    {
+    private static void registerRender(Item item){
         ModelResourceLocation model = new ModelResourceLocation(item.getRegistryName(), "inventory");
         ModelLoader.setCustomModelResourceLocation(item, 0, model);
     }
 
     @SubscribeEvent
-    public static void registerRecipes(RegistryEvent.Register<IRecipe> event)
-    {
+    public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
         //((ForgeRegistry<IRecipe>)event.getRegistry()).clear();
 
     }
